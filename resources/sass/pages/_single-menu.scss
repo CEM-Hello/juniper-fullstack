@@ -1,0 +1,123 @@
+.menu-single {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    display: inline-block;
+    font-family: 'Crimson Text', serif;
+    color: $DkBlue;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 36px;
+    position: relative;
+    margin-top: 28px;
+    margin-bottom: 90px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  }
+
+  h3:before {
+    left: -40px;
+    height: 0;
+    height: 1px;
+  }
+
+  h3:before,
+  h3:after {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    height: 1px;
+    width: 40px;
+    margin: 4px -15px;
+    background-color: $DkBlue;
+
+    @include media-breakpoint-down(md) {
+      margin: 2px -15px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  h3:after {
+    right: -40px;
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 15px;
+    font-weight: 400;
+  }
+
+  .item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .item h4,
+  .item p {
+    display: block;
+    clear: both;
+    color: #333;
+  }
+
+  .item p {
+    clear: both;
+    color: #333;
+    margin-left: 5px;
+  }
+
+  .item span:first-of-type {
+    background-image: linear-gradient(to right, rgba(56, 47, 47, .5) 33%, rgba(0, 0, 0, 0) 0%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 22px;
+  }
+
+  /* Dots in IE */
+  @media screen and (-ms-high-contrast:active),
+  (-ms-high-contrast:none) {
+    .dots {
+      background: transparent url('/img/dot.gif') repeat-x bottom left;
+    }
+  }
+
+  .item span:nth-of-type(2n) {
+    position: absolute;
+    font-size: 22px;
+    font-weight: 700;
+    right: 0;
+    padding-left: 8px;
+    color: $Orange;
+    background-color: #fff;
+    z-index: 0;
+    top: 6px;
+  }
+
+  .item h4 {
+    display: inline-block;
+    font-family: 'Crimson Text', serif;
+    font-weight: 700;
+    color: $DkBlue;
+    padding-right: 8px;
+    font-size: 1.5rem;
+    max-width: 80%;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+    position: relative;
+  }
+}

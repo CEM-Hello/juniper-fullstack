@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Overpass:wght@300;400;600;700;800&display=swap');
+
+$Orange: #fc4e09;
+$DkBlue: #092958;
+$LtBlue: #465e7f;
+$DkGray: #818e96;
+$LtGray: #d9d9d5;
+
+// // Grid breakpoints
+// $grid-breakpoints: (xs: 0,
+//     sm: 576px,
+//     md: 768px,
+//     lg: 1024px,
+//     xl: 1280px,
+//     xxl: 1440px);
+
+// Grid containers
+$container-max-widths: (sm: 100%,
+    md: 100%,
+    lg: 100%,
+    xl: 1150px,
+    xxl: 1310px);

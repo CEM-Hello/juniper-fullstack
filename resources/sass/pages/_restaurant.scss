@@ -1,0 +1,29 @@
+.chef-item {
+  text-align: center;
+}
+
+.chef-item .thumb {
+  position: relative;
+}
+
+.chef-item .thumb img {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.chef-item .down-content {
+  padding: 20px 0px;
+}
+
+.chef-item .down-content h4 {
+  font-family: 'Crimson Text', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: $DkBlue;
+}
+
+.chef-item .down-content span {
+  font-size: 18px;
+  color: #2a2a2a;
+}

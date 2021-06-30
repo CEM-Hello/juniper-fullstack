@@ -1,0 +1,158 @@
+footer {
+  background: $LtBlue;
+}
+
+.empty-sm-15 {
+  height: 15px;
+}
+
+.empty-sm-20 {
+  height: 20px;
+}
+
+.empty-sm-30 {
+  height: 30px;
+}
+
+.empty-sm-60 {
+  height: 60px;
+}
+
+footer .title {
+  color: #fff;
+}
+
+footer .copyright {
+  background: #2b2b2b;
+}
+
+.footer-item {
+  position: relative;
+}
+
+.footer-item .h5 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.simple-text p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.list-style-1 {
+  position: relative;
+  padding: 0;
+}
+
+.list-style-1 li {
+  color: #fff;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-style-1 i {
+  border-bottom: 1px dashed #fff;
+  position: relative;
+  flex: 3 0px;
+}
+
+.list-style-1 span {
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+  padding-right: 5px;
+  max-width: 55%;
+}
+
+.list-style-1 b {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 5px;
+  text-align: right;
+}
+
+.list-style-1 .txt {
+  padding-left: 85px;
+}
+
+.list-style-1 li a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.subscribe-form {
+  position: relative;
+}
+
+.subscribe-form .input-field {
+  color: $LtGray;
+  height: 50px;
+  font-size: 13px;
+  line-height: 48px;
+  padding: 0 15px;
+  border-right: 0 none;
+  border: 1px solid $Orange;
+}
+
+.sub-submit {
+  position: relative;
+  padding: 0 22px;
+  height: 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: $Orange;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background: $DkBlue;
+  }
+}
+
+.sub-submit input {
+  position: absolute;
+  color: #1b2228;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 0;
+  border: 0px none;
+  outline: none;
+  background: none;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  background: #2b2b2b;
+}
+
+.copyright span {
+  color: #898989;
+  font-size: 14px;
+}

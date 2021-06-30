@@ -1,0 +1,94 @@
+.contact-1 {
+  margin-bottom: 50px;
+}
+
+.contact .contact--desc {
+  margin-bottom: 40px;
+}
+
+.contact .contact--desc p {
+  color: #a5a5a5;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.contact--info h3 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 18px;
+  color: $DkBlue;
+}
+
+.contact--info p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 33px;
+  margin-bottom: 0;
+  color: #333333;
+}
+
+.contact--info p:last-of-type {
+  margin-bottom: 6px;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.contact--info a.link--styled {
+  color: $Orange;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact--info a.link--styled:hover {
+  color: #222222;
+}
+
+.contact--info .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.contact--info .social-icons a i {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact--info .social-icons a:hover {
+  color: #ffffff;
+  background-color: #bb9356;
+}
+
+.contact--info .social-icons a:hover i {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+
+  .contact--info {
+    margin-bottom: 20px;
+  }
+}

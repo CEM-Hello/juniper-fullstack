@@ -1,0 +1,344 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+header {
+    width: 300px;
+    background: white;
+    padding: 30px 0;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+
+    .header-position {
+        position: fixed;
+        width: 300px;
+        top: 30px;
+        left: 0;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .logo {
+        //@include hide-text;
+        background-image: url(/img/logo-web.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 155px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .site-nav {
+        ul {
+            list-style: none;
+            margin: 15px 0;
+            padding: 0;
+            text-align: center;
+
+            li {
+                margin-bottom: 25px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    position: relative;
+                    color: $LtBlue;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    transition: color .3s ease-in-out;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        height: 2px;
+                        left: 0;
+                        right: 0;
+                        bottom: -5px;
+                        background: linear-gradient(to right, rgba(30, 87, 153, 0) 0%, rgb(252, 78, 9) 50%, rgba(125, 185, 232, 0) 100%);
+                        opacity: 0;
+                        transition: opacity .3s ease-in-out;
+                    }
+
+                    &:hover {
+                        color: $Orange;
+                        text-decoration: none;
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $LtBlue;
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: white;
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background .3s ease-in-out;
+
+            &:hover {
+                background: $Orange;
+            }
+        }
+    }
+
+    .location {
+        text-align: center;
+        font-weight: 700;
+
+        .address {
+            color: $LtBlue;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .phone-number {
+            a {
+                color: $Orange;
+                text-decoration: none;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// MOBILE HEADER
+.mobile-header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: white;
+    position: fixed;
+    height: 60px;
+    overflow: hidden;
+    z-index: 900;
+
+    @include media-breakpoint-only(md) {
+        height: 85px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.mobile-logo {
+    // @include hide-text;
+    background-image: url(/img/logo-web-mobile.svg);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    z-index: 900;
+    top: 10px;
+    left: 15px;
+
+    @include media-breakpoint-only(md) {
+        width: 100px;
+        height: 55px;
+        top: 15px;
+        left: 35px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    margin-top: 60px;
+    transform: translateX(-550px);
+    transition: transform 250ms ease-in-out;
+    background: white;
+    z-index: 900;
+
+    @include media-breakpoint-only(md) {
+        margin-top: 85px;
+        width: 350px;
+        transform: translateX(-350px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(73, 73, 73, 0.2);
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(73, 73, 73, 0.2);
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: $LtBlue;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+
+    @include media-breakpoint-only(md) {
+        font-size: 1.4rem;
+    }
+}
+
+input[type="checkbox"]:checked~#sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: fixed;
+    z-index: 900;
+    height: 100%;
+    width: 100%;
+    top: 18px;
+    right: 20px;
+    height: 35px;
+    width: 35px;
+
+    @include media-breakpoint-only(md) {
+        top: 22px;
+        right: 35px;
+        height: 50px;
+        width: 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: $LtBlue;
+
+    @include media-breakpoint-only(md) {
+        height: 5px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 8px;
+
+    @include media-breakpoint-only(md) {
+        margin-top: 12px;
+    }
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 8px;
+
+    @include media-breakpoint-only(md) {
+        margin-top: 12px;
+    }
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+
+    @include media-breakpoint-only(md) {
+        margin-top: 14px;
+    }
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -14px;
+
+    @include media-breakpoint-only(md) {
+        margin-top: -20px;
+    }
+}

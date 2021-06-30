@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $DkBlue;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $DkBlue;
+    text-decoration: none;
+  }
+}
+
+.container {
+  @include media-breakpoint-only(lg) {
+    max-width: 1300px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @include media-breakpoint-only(md) {
+    max-width: 720px;
+  }
+}
+
+.flex-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+  }
+}
+
+[data-object-fit='true'] {
+  object-fit: cover;
+}
+
+.order-switch {
+  @include media-breakpoint-down(md) {
+    order: 1;
+  }
+}
+
+.fancy-text {
+  font-family: 'Crimson Text', serif;
+  font-size: 25px;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  margin-top: 10px;
+  letter-spacing: normal;
+  color: #333333;
+
+  @include media-breakpoint-down(md) {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}

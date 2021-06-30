@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+.main-wrap {
+  display: flex;
+  min-height: 100vh;
+}
+
+.page-sections {
+  flex: 1;
+}

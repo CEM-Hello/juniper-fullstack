@@ -1,0 +1,299 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.h-intro {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.home-p-products {
+  position: relative;
+  z-index: 2;
+  max-width: 730px;
+  margin: auto;
+}
+
+.top-h1-2 {
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  letter-spacing: 8.3px;
+  color: #333333;
+
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-family: 'Crimson Text', serif;
+    font-size: 75px;
+    line-height: .88;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+    letter-spacing: normal;
+    color: $DkBlue;
+
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.top-p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #333333;
+
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0;
+  }
+}
+
+.tasting-room,
+.h-restaurant,
+.h-mission {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+  }
+}
+
+.home-p1 {
+  position: relative;
+  z-index: 30;
+  left: 55px;
+  //width: 44%;
+
+  @include media-breakpoint-down(lg) {
+    left: 0;
+    margin-bottom: 25px;
+  }
+
+  .top-p {
+    width: 90%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.card-gutters>.col,
+.card-gutters>[class*="col-"] {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.card-gutters {
+  margin-right: -4px;
+  margin-left: -4px;
+}
+
+.tasting-room-gallery {
+  position: relative;
+  left: 55px;
+  margin-bottom: 50px;
+
+  @include media-breakpoint-down(lg) {
+    left: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.h-products-bottles {
+  position: relative;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 1em;
+
+  @include media-breakpoint-down(md) {
+    padding: 1em 0;
+  }
+}
+
+.tasting-room-gallery-wrap {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    right: -6%;
+    bottom: -7%;
+    width: 264px;
+    height: 249px;
+    content: '';
+    background-color: $LtBlue;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.tony-text {
+  font-family: 'Crimson Text', serif;
+  font-size: 30px;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  margin-top: 60px;
+  text-align: center;
+  letter-spacing: normal;
+  color: #575757;
+
+  @include media-breakpoint-down(md) {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.restaurant-text {
+  position: relative;
+  left: 55px;
+
+  @include media-breakpoint-down(md) {
+    left: 0;
+  }
+}
+
+.restaurant-img {
+  padding-bottom: 25px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 30px;
+  }
+}
+
+.restaurant-gallery-wrap {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    left: -6%;
+    bottom: -3%;
+    width: 264px;
+    height: 249px;
+    content: '';
+    background-color: $Orange;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.restaurant-gallery-wrap-2 {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    left: -14%;
+    bottom: 7%;
+    width: 264px;
+    height: 249px;
+    content: '';
+    background-color: $Orange;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.restaurant-gallery-wrap-3 {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    left: -14%;
+    bottom: 6%;
+    width: 264px;
+    height: 249px;
+    content: '';
+    background-color: $LtBlue;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.mission-img {
+  position: relative;
+  left: 55px;
+
+  @include media-breakpoint-down(md) {
+    left: 0;
+    margin-top: 30px;
+  }
+}
+
+.event-room-gallery-wrap {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    right: -15%;
+    bottom: -7%;
+    width: 264px;
+    height: 249px;
+    content: '';
+    background-color: $LtBlue;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.about-hand {
+  margin-bottom: 80px;
+}
+
+.juniper-gallery-wrap {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    right: 5%;
+    bottom: -3%;
+    width: 264px;
+    height: 249px;
+    content: '';
+    background-color: $LtBlue;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.juniper-gallery-wrap-2 {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    left: -5%;
+    bottom: -4%;
+    width: 264px;
+    height: 249px;
+    content: '';
+    background-color: $Orange;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}

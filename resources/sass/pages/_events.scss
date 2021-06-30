@@ -1,0 +1,33 @@
+.event-gallery-wrap {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    left: -2%;
+    bottom: -1%;
+    width: 174px;
+    height: 250px;
+    content: '';
+    background-color: $LtBlue;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.tours-gallery-wrap {
+  &:after {
+    position: absolute;
+    z-index: -1;
+    right: 2%;
+    bottom: -4%;
+    width: 174px;
+    height: 250px;
+    content: '';
+    background-color: $Orange;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
