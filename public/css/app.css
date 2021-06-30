@@ -21578,43 +21578,43 @@ footer .copyright {
 }
 
 .tasting-banner {
-  background-image: url(/assets/img/tasting-banner.jpg);
+  background-image: url(/img/tasting-banner.jpg);
 }
 
 .restaurant-banner {
-  background-image: url(/assets/img/restaurant-banner.jpg);
+  background-image: url(/img/restaurant-banner.jpg);
 }
 
 .reservations-banner {
-  background-image: url(/assets/img/reservations-banner.jpg);
+  background-image: url(/img/reservations-banner.jpg);
 }
 
 .events-banner {
-  background-image: url(/assets/img/events-banner.jpg);
+  background-image: url(/img/events-banner.jpg);
 }
 
 .club-banner {
-  background-image: url(/assets/img/club-banner.jpg);
+  background-image: url(/img/club-banner.jpg);
 }
 
 .cocktail-menu-banner {
-  background-image: url(/assets/img/cocktail-banner.jpg);
+  background-image: url(/img/cocktail-banner.jpg);
 }
 
 .food-menu-banner {
-  background-image: url(/assets/img/food-menu-banner.jpg);
+  background-image: url(/img/food-menu-banner.jpg);
 }
 
 .contact-banner {
-  background-image: url(/assets/img/contact-banner.jpg);
+  background-image: url(/img/contact-banner.jpg);
 }
 
 .about-banner {
-  background-image: url(/assets/img/about-banner.jpg);
+  background-image: url(/img/about-banner.jpg);
 }
 
 .products-banner {
-  background-image: url(/assets/img/products-banner.jpg);
+  background-image: url(/img/products-banner.jpg);
 }
 
 .p-mastehead {
@@ -21979,38 +21979,6 @@ footer .copyright {
   .juniper-gallery-wrap-2:after {
     display: none;
   }
-}
-
-.tasting-banner {
-  background-image: url(/assets/img/tasting-banner.jpg);
-}
-
-.restaurant-banner {
-  background-image: url(/assets/img/restaurant-banner.jpg);
-}
-
-.reservations-banner {
-  background-image: url(/assets/img/reservations-banner.jpg);
-}
-
-.events-banner {
-  background-image: url(/assets/img/events-banner.jpg);
-}
-
-.club-banner {
-  background-image: url(/assets/img/club-banner.jpg);
-}
-
-.cocktail-menu-banner {
-  background-image: url(/assets/img/cocktail-banner.jpg);
-}
-
-.food-menu-banner {
-  background-image: url(/assets/img/food-menu-banner.jpg);
-}
-
-.contact-banner {
-  background-image: url(/assets/img/contact-banner.jpg);
 }
 
 .p-mastehead {

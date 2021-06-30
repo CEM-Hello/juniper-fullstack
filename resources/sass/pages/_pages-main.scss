@@ -1,408 +1,376 @@
-.tasting-banner {
-  background-image: url(/assets/img/tasting-banner.jpg);
-}
-
-.restaurant-banner {
-  background-image: url(/assets/img/restaurant-banner.jpg);
-}
-
-.reservations-banner {
-  background-image: url(/assets/img/reservations-banner.jpg);
-}
-
-.events-banner {
-  background-image: url(/assets/img/events-banner.jpg);
-}
-
-.club-banner {
-  background-image: url(/assets/img/club-banner.jpg);
-}
-
-.cocktail-menu-banner {
-  background-image: url(/assets/img/cocktail-banner.jpg);
-}
-
-.food-menu-banner {
-  background-image: url(/assets/img/food-menu-banner.jpg);
-}
-
-.contact-banner {
-  background-image: url(/assets/img/contact-banner.jpg);
-}
-
 .p-mastehead {
-  position: relative;
-  height: 40vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center center;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
+    height: 40vh;
     width: 100%;
-    height: 100%;
-    display: inline-block;
-    background: linear-gradient(to bottom, rgba(9, 41, 88, 0.6) 0%, rgba(255, 255, 255, 0.8) 100%);
-  }
+    background-size: cover;
+    background-position: center center;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background: linear-gradient(to bottom, rgba(9, 41, 88, 0.6) 0%, rgba(255, 255, 255, 0.8) 100%);
+    }
 }
 
 .page-box {
-  margin: auto;
+    margin: auto;
 }
 
 .head-page-box {
-  position: relative;
-  margin-top: -60px;
-  padding-top: 1px;
-  margin-bottom: 50px;
+    position: relative;
+    margin-top: -60px;
+    padding-top: 1px;
+    margin-bottom: 50px;
 
-  @include media-breakpoint-down(md) {
-    margin-top: 0;
-  }
+    @include media-breakpoint-down(md) {
+        margin-top: 0;
+    }
 }
 
 .page-box__head {
-  padding-top: 1px;
-  padding-right: 35px;
-  padding-bottom: 15px;
-  padding-left: 35px;
-  background: #fff;
-  border-top: 5px solid $Orange;
+    padding-top: 1px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    background: #fff;
+    border-top: 5px solid $Orange;
 
-  @include media-breakpoint-down(md) {
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 15px;
-    border-top: none;
-  }
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 15px;
+        border-top: none;
+    }
 }
 
 .top-h1-2.subtitle-h1 {
-  margin: 0;
+    margin: 0;
 }
 
 .page-text {
-  max-width: 840px;
-  margin-right: auto;
-  margin-left: auto;
-
-  @include media-breakpoint-down(md) {
     max-width: 840px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0;
-  }
+
+    @include media-breakpoint-down(md) {
+        max-width: 840px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+    }
 }
 
 .page-box__body {
-  padding-right: 35px;
-  padding-bottom: 35px;
-  padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 35px;
+    padding-left: 35px;
 
-  @include media-breakpoint-down(md) {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 15px;
-  }
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
 }
 
 .page-text p {
-  font-size: 20px;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.51;
-  margin-bottom: 15px;
-  padding: 0;
-  text-align: left;
-  letter-spacing: normal;
-  color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.51;
+    margin-bottom: 15px;
+    padding: 0;
+    text-align: left;
+    letter-spacing: normal;
+    color: #000;
 
-  @include media-breakpoint-down(md) {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
+    @include media-breakpoint-down(md) {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
 
-  @include media-breakpoint-down(sm) {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
 }
 
 .menu-categories {
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 
-  .food-cat-item {
-    @include media-breakpoint-down(md) {
-      margin-bottom: 30px;
+    .food-cat-item {
+        @include media-breakpoint-down(md) {
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-family: 'Crimson Text', serif;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1;
+            margin-top: 25px;
+            color: $DkBlue;
+        }
+
+        .food-cat-img {
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
     }
-
-    h3 {
-      font-family: 'Crimson Text', serif;
-      position: relative;
-      text-transform: uppercase;
-      font-size: 26px;
-      font-weight: 600;
-      line-height: 1;
-      margin-top: 25px;
-      color: $DkBlue;
-    }
-
-    .food-cat-img {
-      transition: all .3s ease-in-out;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
-  }
 }
 
 .hours-block {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 
-  @include media-breakpoint-down(md) {
-    margin-bottom: 30px;
-  }
+    @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+    }
 
-  h3 {
-    font-family: 'Crimson Text', serif;
-    font-size: 32px;
-    font-weight: 800;
-    color: $DkBlue;
-  }
+    h3 {
+        font-family: 'Crimson Text', serif;
+        font-size: 32px;
+        font-weight: 800;
+        color: $DkBlue;
+    }
 
-  p {
-    font-size: 20px;
-    line-height: 1.5;
-    font-weight: 600;
-    color: #333;
-  }
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 600;
+        color: #333;
+    }
 
-  .hours-block-btn {
-    color: #333;
-    font-weight: 800;
-    text-decoration: underline;
-  }
+    .hours-block-btn {
+        color: #333;
+        font-weight: 800;
+        text-decoration: underline;
+    }
 }
 
 .quote-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 
-  .quote-text {
-    font-family: 'Crimson Text', serif;
-    font-size: 30px;
-    font-style: italic;
-    font-stretch: normal;
-    line-height: normal;
-    margin-top: 60px;
-    text-align: center;
-    letter-spacing: normal;
-    color: #575757;
-    width: 45%;
+    .quote-text {
+        font-family: 'Crimson Text', serif;
+        font-size: 30px;
+        font-style: italic;
+        font-stretch: normal;
+        line-height: normal;
+        margin-top: 60px;
+        text-align: center;
+        letter-spacing: normal;
+        color: #575757;
+        width: 45%;
 
-    @include media-breakpoint-down(md) {
-      font-size: 22px;
-      margin-top: 20px;
-      margin-bottom: 30px;
+        @include media-breakpoint-down(md) {
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
     }
-  }
 }
 
 .events {
-  margin-bottom: 80px;
+    margin-bottom: 80px;
 
-  @include media-breakpoint-down(md) {
-    margin-bottom: 30px;
-  }
+    @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+    }
 }
 
 .events-text {
-  position: relative;
-  left: 55px;
-
-  @include media-breakpoint-down(md) {
-    left: 0;
-  }
-
-  .top-p {
-    width: 81%;
+    position: relative;
+    left: 55px;
 
     @include media-breakpoint-down(md) {
-      width: 100%;
+        left: 0;
     }
 
-    b {
-      font-weight: bold;
+    .top-p {
+        width: 81%;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
+        b {
+            font-weight: bold;
+        }
     }
-  }
 }
 
 .events-img {
-  padding-bottom: 25px;
-  width: 90%;
+    padding-bottom: 25px;
+    width: 90%;
 
-  @include media-breakpoint-down(md) {
-    margin-top: 30px;
-    width: 100%;
-  }
+    @include media-breakpoint-down(md) {
+        margin-top: 30px;
+        width: 100%;
+    }
 }
 
 .tours-text {
-  max-width: 660px;
-
-  @include media-breakpoint-down(md) {
-    left: 0;
-  }
-
-  .top-p {
-    width: 81%;
+    max-width: 660px;
 
     @include media-breakpoint-down(md) {
-      width: 100%;
+        left: 0;
     }
 
-    b {
-      font-weight: bold;
+    .top-p {
+        width: 81%;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
+        b {
+            font-weight: bold;
+        }
     }
-  }
 }
 
 .tours-img {
-  width: 85%;
-  float: right;
-  height: auto;
-  max-height: 800px;
-  padding-right: 25px;
+    width: 85%;
+    float: right;
+    height: auto;
+    max-height: 800px;
+    padding-right: 25px;
 
-  @include media-breakpoint-down(md) {
-    margin-top: 30px;
-    width: 100%;
-    padding-right: 0;
-  }
+    @include media-breakpoint-down(md) {
+        margin-top: 30px;
+        width: 100%;
+        padding-right: 0;
+    }
 }
 
 .private-text {
-  position: relative;
-  left: 55px;
-
-  @include media-breakpoint-down(md) {
-    left: 0;
-  }
-
-  .top-p {
-    width: 81%;
+    position: relative;
+    left: 55px;
 
     @include media-breakpoint-down(md) {
-      width: 100%;
+        left: 0;
     }
 
-    b {
-      font-weight: bold;
+    .top-p {
+        width: 81%;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
+        b {
+            font-weight: bold;
+        }
     }
-  }
 }
 
 .private-img {
-  padding-bottom: 25px;
-  width: 90%;
+    padding-bottom: 25px;
+    width: 90%;
 
-  @include media-breakpoint-down(md) {
-    margin-top: 30px;
-    width: 100%;
-  }
+    @include media-breakpoint-down(md) {
+        margin-top: 30px;
+        width: 100%;
+    }
 }
 
 .reservations-info {
-  padding-bottom: 100px;
+    padding-bottom: 100px;
 
-  @include media-breakpoint-down(md) {
-    padding-bottom: 30px;
-  }
+    @include media-breakpoint-down(md) {
+        padding-bottom: 30px;
+    }
 }
 
 .form-block {
-  @include media-breakpoint-down(md) {
-    padding-bottom: 30px;
-  }
+    @include media-breakpoint-down(md) {
+        padding-bottom: 30px;
+    }
 }
 
 .fine-print {
-  border: 1px solid $LtBlue;
-  padding: 30px;
-  margin-bottom: 100px;
+    border: 1px solid $LtBlue;
+    padding: 30px;
+    margin-bottom: 100px;
 }
 
 .contact-info {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
 
-  ul {
-    list-style: none;
-    padding: 0;
+    ul {
+        list-style: none;
+        padding: 0;
 
-    li {
-      margin-bottom: 15px;
+        li {
+            margin-bottom: 15px;
+        }
     }
-  }
 }
 
 .shop {
-  margin-bottom: 80px;
+    margin-bottom: 80px;
 
-  @include media-breakpoint-down(md) {
-    margin-bottom: 30px;
-  }
+    @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+    }
 }
 
 .product-card {
-  border: none;
-  margin-top: 50px;
+    border: none;
+    margin-top: 50px;
 
-  @include media-breakpoint-down(md) {}
+    @include media-breakpoint-down(md) {}
 
-  .card-title {
-    font-family: 'Crimson Text', serif;
-    font-size: 30px;
-    color: $DkBlue;
-    font-weight: 700;
-  }
-
-  .card-text {
-    margin-bottom: 35px;
-
-    span {
-      font-size: 18px;
-      font-weight: 700;
-      color: #333;
+    .card-title {
+        font-family: 'Crimson Text', serif;
+        font-size: 30px;
+        color: $DkBlue;
+        font-weight: 700;
     }
-  }
 
-  .add-to-cart {
-    color: white;
-    background: $DkBlue;
-    padding: 14px 15px 12px;
-    border-radius: 5px;
-    transition: background .3s ease-in-out;
+    .card-text {
+        margin-bottom: 35px;
 
-    &:hover {
-      background: $Orange;
+        span {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
     }
-  }
+
+    .add-to-cart {
+        color: white;
+        background: $DkBlue;
+        padding: 14px 15px 12px;
+        border-radius: 5px;
+        transition: background .3s ease-in-out;
+
+        &:hover {
+            background: $Orange;
+        }
+    }
 }
 
 .card-horizontal {
-  display: flex;
-  flex: 1 1 auto;
+    display: flex;
+    flex: 1 1 auto;
 
-  @include media-breakpoint-down(sm) {
-    flex-direction: column;
-  }
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
 }

@@ -11,13 +11,13 @@
 <div id="sidebarMenu">
   <ul class="sidebarMenuInner">
     <li><a href="/">Home</a></li>
-    <li><a href="/tasting-room.html">Tasting Room</a></li>
-    <li><a href="/restaurant.html">Restaurant</a></li>
-    <li><a href="/reservations.html">Reservations</a></li>
-    <li><a href="/events.html">Events</a></li>
-    <li><a href="/barrel-club.html">Barrel Club</a></li>
-    <li><a href="/barrel-news.html">Barrel News</a></li>
-    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="/tasting-room">Tasting Room</a></li>
+    <li><a href="/restaurant">Restaurant</a></li>
+    <li><a href="/reservations">Reservations</a></li>
+    <li><a href="/events">Events</a></li>
+    <li><a href="/barrel-club">Barrel Club</a></li>
+    <li><a href="/barrel-news">Barrel News</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
 </div>
 
@@ -29,13 +29,13 @@
     <nav class="site-nav">
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/tasting-room.html">Tasting Room</a></li>
-        <li><a href="/restaurant.html">Restaurant</a></li>
-        <li><a href="/reservations.html">Reservations</a></li>
-        <li><a href="/events.html">Events</a></li>
-        <li><a href="/barrel-club.html">Barrel Club</a></li>
-        <li><a href="/barrel-news.html">Barrel News</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/tasting-room">Tasting Room</a></li>
+        <li><a href="/restaurant">Restaurant</a></li>
+        <li><a href="/reservations">Reservations</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/barrel-club">Barrel Club</a></li>
+        <li><a href="/barrel-news">Barrel News</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
     <div class="social-icons">
