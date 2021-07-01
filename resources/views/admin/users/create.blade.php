@@ -37,20 +37,10 @@
                     <form method="POST" action="/admin/users">
                         @csrf
                         <div class="form-group">
-                            <label for="inputfirstname">First Name</label>
-                            <input id="inputfirstname" type="text" class="form-control form-control-lg @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="name" autofocus placeholder="First Name">
+                            <label for="inputname">Name</label>
+                            <input id="inputname" type="text" class="form-control form-control-lg @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Full Name">
 
                             @error('fname')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="inputlastname">Last Name</label>
-                            <input id="inputlastname" type="text" class="form-control form-control-lg @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="name" autofocus placeholder="Last Name">
-
-                            @error('lname')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -84,8 +74,14 @@
                         <div class="form-group">
                             <label for="inputrole">Role</label>
                             <select name="role_id" class="form-control" id="inputrole">
-                               
-                            </select>
+                              @foreach ($roles as $role)
+                                  <option value="{{$role->id}}" 
+                                  @if ($role->title == 'Admin')
+                                      selected
+                                  @endif
+                                  >{{$role->title}}</option>
+                              @endforeach
+                          </select>
                         </div>
                         
                         

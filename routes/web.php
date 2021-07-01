@@ -69,11 +69,12 @@ Route::get('/admin/reservations', [ReservationController::class, 'index']);
 //Admin Users
 Route::get('/admin/users', [UsersController::class, 'index']);
 Route::get('/admin/users/create', [UsersController::class, 'create']);
-Route::get('/admin/users/edit', [UsersController::class, 'edit']);
-
-//Admin Dashboard
-//Route::get('/admin', [AdminController::class, 'dashboard']);
+Route::post('/admin/users', [UsersController::class, 'store']);
+Route::get('/admin/users/{id}/edit', [UsersController::class, 'edit']);
+Route::put('/admin/users/{id}', [UsersController::class, 'update']);
+Route::delete('/admin/users/{id}/delete', [UsersController::class, 'delete']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('admin.dashboard');
+    return view('dashboard');
 })->name('dashboard');
+

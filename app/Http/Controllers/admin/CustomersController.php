@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
   public function allClubMembers() {
     return view('admin/customers/club-members');
   }

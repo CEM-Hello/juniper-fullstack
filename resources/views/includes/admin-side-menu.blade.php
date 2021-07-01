@@ -14,7 +14,7 @@
                   <div id="submenu-1" class="collapse submenu" style="">
                       <ul class="nav flex-column">
                           <li class="nav-item">
-                              <a class="nav-link" href="/admin">Home</a>
+                              <a class="nav-link" href="/dashboard">Home</a>
                           </li>
                       </ul>
                   </div>

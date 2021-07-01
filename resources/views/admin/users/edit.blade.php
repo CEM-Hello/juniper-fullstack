@@ -34,24 +34,14 @@
             <div class="card">
                 <h5 class="card-header">Edit User</h5>
                 <div class="card-body">
-                    <form method="POST" action="/admin/users/">
+                    <form method="POST" action="/admin/users/{{$user->id}}">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
-                            <label for="inputfirstname">First Name</label>
-                            <input id="inputfirstname" type="text" class="form-control form-control-lg @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname', $user->fname) }}" required autocomplete="name" autofocus placeholder="First Name">
+                            <label for="inputname">Full Name</label>
+                            <input id="inputname" type="text" class="form-control form-control-lg @error('name') is-invalid @enderror" name="name" value="{{ old('name', $user->name) }}" required autocomplete="name" autofocus placeholder="First Name">
 
-                            @error('fname')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="inputlastname">Last Name</label>
-                            <input id="inputlastname" type="text" class="form-control form-control-lg @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname', $user->lname) }}" required autocomplete="name" autofocus placeholder="Last Name">
-
-                            @error('lname')
+                            @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -85,8 +75,14 @@
                         <div class="form-group">
                             <label for="inputrole">Role</label>
                             <select name="role_id" class="form-control" id="inputrole">
-                               
-                            </select>
+                              @foreach ($roles as $role)
+                                  <option value="{{$role->id}}" 
+                                  @if ($role->title == 'Employee')
+                                      selected
+                                  @endif
+                                  >{{$role->title}}</option>
+                              @endforeach
+                          </select>
                         </div>
                         
                         
