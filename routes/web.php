@@ -1,6 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\UsersController;
+use App\Http\Controllers\StaticPagesController;
+use App\Http\Controllers\admin\MemberController;
+use App\Http\Controllers\admin\FoodItemsController;
+use App\Http\Controllers\admin\ReservationController;
+use App\Http\Controllers\admin\CocktailItemsController;
+use App\Http\Controllers\admin\FoodCategoriesController;
+use App\Http\Controllers\admin\CocktailCategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,54 +22,58 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Static Pages
+Route::get('/', [StaticPagesController::class, 'home']);
+Route::get('/about', [StaticPagesController::class, 'about']);
+Route::get('/products', [StaticPagesController::class, 'products']);
+Route::get('/tasting-room', [StaticPagesController::class, 'tastingRoom']);
+Route::get('/cocktail-menu/{slug}', [StaticPagesController::class, 'cocktailMenu']);
+Route::get('/restaurant', [StaticPagesController::class, 'restaurant']);
+Route::get('/food-menu/{slug}', [StaticPagesController::class, 'foodMenu']);
+Route::get('/reservations', [StaticPagesController::class, 'reservations']);
+Route::post('/reservations', [StaticPagesController::class, 'saveReservation']);
+Route::get('/events', [StaticPagesController::class, 'events']);
+Route::get('/barrel-club', [StaticPagesController::class, 'barrelClub']);
+Route::post('/barrel-club', [StaticPagesController::class, 'registerMember']);
+Route::get('/barrel-club/thank-you', [StaticPagesController::class, 'barrelThankYou']);
+Route::get('/barrel-news', [StaticPagesController::class, 'barrelNews']);
+Route::get('/contact', [StaticPagesController::class, 'contact']);
 
-Route::get('/about', function () {
-  return view('pages.about');
-});
+//Admin Cocktails Categories
+Route::get('/admin/cocktail-categories', [CocktailCategoriesController::class, 'index']);
+Route::get('/admin/cocktail-categories/create', [CocktailCategoriesController::class, 'create']);
+Route::get('/admin/cocktail-categories/edit', [CocktailCategoriesController::class, 'edit']);
 
-Route::get('/products', function () {
-  return view('pages.products');
-});
+//Admin Cocktails Items
+Route::get('/admin/cocktail-items', [CocktailItemsController::class, 'index']);
+Route::get('/admin/cocktail-items/create', [CocktailItemsController::class, 'create']);
+Route::get('/admin/cocktail-items/edit', [CocktailItemsController::class, 'edit']);
 
-Route::get('/tasting-room', function () {
-  return view('cocktail-menu.index');
-});
+//Admin Food Categories
+Route::get('/admin/food-categories', [FoodCategoriesController::class, 'index']);
+Route::get('/admin/food-categories/create', [FoodCategoriesController::class, 'create']);
+Route::get('/admin/food-categories/edit', [FoodCategoriesController::class, 'edit']);
 
-Route::get('/cocktail-menu', function () {
-  return view('cocktail-menu.cocktail-menu');
-});
+//Admin Food Items
+Route::get('/admin/food-items', [FoodItemsController::class, 'index']);
+Route::get('/admin/food-items/create', [FoodItemsController::class, 'create']);
+Route::get('/admin/food-items/edit', [FoodItemsController::class, 'edit']);
 
-Route::get('/restaurant', function () {
-  return view('food-menu.index');
-});
+//Admin Customers
+//Admin Members
+Route::get('/admin/members', [MemberController::class, 'index']);
 
-Route::get('/food-menu', function () {
-  return view('food-menu.food-menu');
-});
+//Admin Reservations
+Route::get('/admin/reservations', [ReservationController::class, 'index']);
 
-Route::get('/reservations', function () {
-  return view('pages.reservations');
-});
+//Admin Users
+Route::get('/admin/users', [UsersController::class, 'index']);
+Route::get('/admin/users/create', [UsersController::class, 'create']);
+Route::get('/admin/users/edit', [UsersController::class, 'edit']);
 
-Route::get('/events', function () {
-  return view('pages.events');
-});
-
-Route::get('/barrel-club', function () {
-  return view('pages.barrel-club');
-});
-
-Route::get('/barrel-news', function () {
-  return view('pages.barrel-news');
-});
-
-Route::get('/contact', function () {
-  return view('pages.contact');
-});
+//Admin Dashboard
+//Route::get('/admin', [AdminController::class, 'dashboard']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.dashboard');
 })->name('dashboard');

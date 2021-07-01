@@ -106,7 +106,7 @@
               <img class="" src="/img/products/whisky-sm.jpg" alt="Card image cap">
             </div>
             <div class="card-body">
-              <h4 class="card-title">American Whisky</h4>
+              <h4 class="card-title">American Whiskey</h4>
               <p class="card-text">Not your standard flavorless, odorless vodka. Floral notes give way to a creamy
                 vanilla-like sweetness with subtle hints of apple and pear.<br><br><span>$22.00</span></p>
               <a href="#" class="add-to-cart">Add To Cart</a>
