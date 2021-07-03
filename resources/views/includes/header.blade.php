@@ -39,17 +39,17 @@
       </ul>
     </nav>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-      <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-      <a href="#"><i class="fab fa-yelp" aria-hidden="true"></i></a>
+      <a href="{{$settings["social"]->facebook_url}}" target="new"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+      <a href="{{$settings["social"]->instagram_url}}" target="new"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      <a href="{{$settings["social"]->yelp_url}}" target="new"><i class="fab fa-yelp" aria-hidden="true"></i></a>
     </div>
     <div class="location">
       <div class="address">
-        945 Elliott Ave W,<br>
-        Seattle, WA 98119
+       {{$settings["general"]->address_1}} {{$settings["general"]->address_2}},<br>
+      {{$settings["general"]->city}}, {{$settings["general"]->state}} {{$settings["general"]->zipcode}}
       </div>
       <div class="phone-number">
-        <a href="#">206-219-8652</a>
+        <a href="tel:{{$settings["general"]->phone_number}}">{{$settings["general"]->phone_number}}</a>
       </div>
     </div>
   </div>

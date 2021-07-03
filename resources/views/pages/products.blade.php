@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+The Juniper Shop - {{$settings["general"]->site_title}}
+@endsection
 @section('content')
 <section class="jumbotron p-mastehead products-banner px-0">
 </section>

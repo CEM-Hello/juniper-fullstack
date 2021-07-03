@@ -38,7 +38,7 @@
                         @csrf
                         <div class="form-group">
                             <label for="inputtitle">Title</label>
-                            <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="" required autocomplete="title" autofocus placeholder="Give Item a Title">
+                            <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus placeholder="Give Item a Title">
 
                             @error('title')
                                 <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="form-group">
                             <label for="inputprice">Price</label>
-                            <input id="inputprice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="" required autocomplete="price" autofocus placeholder="Give Item a Price">
+                            <input id="inputprice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus placeholder="Give Item a Price">
 
                             @error('price')
                                 <span class="invalid-feedback" role="alert">
@@ -59,11 +59,15 @@
                         <div class="form-group">
                             <label for="inputcategory">Category</label>
                             <select name="category_id" class="form-control" id="inputrole">
+                                @foreach ($categories as $category)
+                                    <option value="{{$category->id}}"
+                                    >{{$category->title}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="inputimageurl">Image Url</label>
-                            <input id="inputimageurl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="" autocomplete="title" autofocus placeholder="Add the url to the Item image">
+                            <input id="inputimageurl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" autocomplete="title" autofocus placeholder="Add the url to the Item image">
 
                             @error('image_url')
                                 <span class="invalid-feedback" role="alert">
@@ -73,7 +77,7 @@
                         </div>
                         <div class="form-group">
                             <label for="inputdescription">Description</label>
-                            <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write a Description"></textarea>
+                            <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write a Description">{{ old('description') }}</textarea>
 
                             @error('description')
                                 <span class="invalid-feedback" role="alert">

@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+Contact Us - {{$settings["general"]->site_title}}
+@endsection
 @section('content')
 <section class="jumbotron p-mastehead contact-banner px-0">
 </section>

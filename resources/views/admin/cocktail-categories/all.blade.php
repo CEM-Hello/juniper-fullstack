@@ -41,6 +41,28 @@
                                   </tr>
                               </thead>
                               <tbody>
+                                @foreach ($categories as $category)
+                                <tr>
+                                    <th scope="row">{{$category->id}}</th>
+                                    <td>{{$category->title}} </td>
+                                    <td>{{date('m/d/Y', strtotime($category->updated_at))}}</td>
+                                    <td>
+                                        <a href="/admin/cocktail-categories/{{$category->id}}/edit"><i class="far fa-edit"></i></a>
+                                    </td>
+                                    <td>
+                                        
+                                        <a href="#" onclick="event.preventDefault();
+                                  document.getElementById('delete-category-{{$category->id}}').submit();">
+                                      <i class="far fa-trash-alt"></i>
+                                  </a>
+                                  <form id="delete-category-{{$category->id}}" action="/admin/cocktail-categories/{{$category->id}}/delete" method="POST" style="display: none;">
+                                    @method('DELETE')
+                                    @csrf
+                                </form>
+
+                                        </td>
+                                    </tr>    
+                                @endforeach
                               </tbody>
                           </table>
                       </div>

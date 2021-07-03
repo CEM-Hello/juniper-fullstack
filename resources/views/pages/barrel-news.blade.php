@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+Barrel News - {{$settings["general"]->site_title}}
+@endsection
 @section('content')
 <section class="jumbotron p-mastehead cocktail-menu-banner px-0">
 </section>

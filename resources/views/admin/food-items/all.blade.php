@@ -42,8 +42,31 @@
                                   </tr>
                               </thead>
                               <tbody>
+                                @foreach ($items as $item)
+                                <tr>
+                                    <th scope="row">{{$item->id}}</th>
+                                    <td>{{$item->title}} </td>
+                                    <td>{{$item->price}} </td>
+                                    <td>{{date('m/d/Y', strtotime($item->updated_at))}}</td>
+                                    <td>
+                                        <a href="/admin/food-items/{{$item->id}}/edit"><i class="far fa-edit"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="#" onclick="event.preventDefault();
+                document.getElementById('delete-item-{{$item->id}}').submit();">
+                    <i class="far fa-trash-alt"></i>
+                </a>
+                <form id="delete-item-{{$item->id}}" action="/admin/food-items/{{$item->id}}/delete" method="POST" style="display: none;">
+                                @method('DELETE')
+                                @csrf
+                            </form>
+
+                                    </td>
+                                </tr>    
+                            @endforeach
                               </tbody>
                           </table>
+                          {{ $items->links() }}
                       </div>
                   </div>
               </div>

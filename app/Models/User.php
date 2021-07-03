@@ -54,6 +54,14 @@ class User extends Authenticatable
       return $this->belongsToMany('App\Models\Role');
     }
 
+    public function isAdmin(){
+      if($this->roles->contains(1)){
+          return true;
+      } else{
+          return false;
+      }
+    }
+
     /**
      * The accessors to append to the model's array form.
      *

@@ -56,20 +56,6 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="inputdescription">Description</label>
-                            <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write a Description">{{ old('description') }}</textarea>
-
-                            @error('description')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        
-                        
-                        
-                        
                         
                         <div class="row">
                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">

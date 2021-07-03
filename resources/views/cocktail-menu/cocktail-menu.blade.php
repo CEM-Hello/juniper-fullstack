@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+{{$cocktailItem}} - {{$settings['general']->site_title}}
+@endsection
 @section('content')
 <section class="jumbotron p-mastehead food-menu-banner px-0">
 </section>
@@ -7,7 +10,7 @@
     <div class="page-box head-page-box page-text">
       <div class="page-box__head">
         <h1 class="top-h1-2 subtitle-h1">
-          <span>The Farmhouse Menu</span>
+          <span>{{$cocktailItem}} Menu</span>
         </h1>
       </div>
       <div class="page-box__body">
@@ -23,55 +26,19 @@
     <div class="row">
       <div class="col-12">
         <div class="text-center">
-          <h3>Starters</h3>
+          <h3>{{$cocktailItem}}</h3>
         </div>
         <div class="row">
+          @foreach ($cocktailItems as $item)
           <div class="col-sm-6">
             <div class="item">
-              <h4>Ham, Bacon or Sausage Wrap</h4>
+              <h4>{{$item->title}}</h4>
               <span></span>
-              <span>3.49</span>
-              <p>Ham, bacon or sausage and 2 scrambled eggs, hash browns and American cheese </p>
-            </div>
-            <div class="item">
-              <h4>Veggie</h4>
-              <span></span>
-              <span>3.99</span>
-              <p>Eggs, hash-browns, green peppers, onions, mushrooms and Swiss cheese</p>
-            </div>
-            <div class="item">
-              <h4>Steak</h4>
-              <span></span>
-              <span>4.29</span>
-              <p>Shredded ribeye, hash-browns, peppers, onions and Swiss cheese</p>
-            </div>
-            <div class="item">
-              <h4>Oven Roasted Turkey</h4>
-              <span></span>
-              <span>4.29</span>
-              <p>Oven roasted turkey, egg, Swiss cheese and hash-browns</p>
+              <span>${{$item->price}}</span>
+              <p>{{$item->description}}</p>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="item">
-              <h4>Greek</h4>
-              <span></span>
-              <span>4.39</span>
-              <p>Eggs, gyro meat, hash-browns, feta cheese, tomatoes and onions</p>
-            </div>
-            <div class="item">
-              <h4>Deluxe</h4>
-              <span></span>
-              <span>4.59</span>
-              <p>Ham, egg, bacon, sausage, peppers, onions, hash-browns, American and Swiss cheese</p>
-            </div>
-            <div class="item">
-              <h4>Mexican</h4>
-              <span></span>
-              <span>4.59</span>
-              <p>Ground beef, eggs, onions, jalape&ntilde;os, hash-browns, salsa and cheese</p>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>

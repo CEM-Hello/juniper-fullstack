@@ -1,4 +1,10 @@
 @extends('layouts.main')
+@section('title')
+Our Story - {{$settings["general"]->site_title}}
+@endsection
+@section('discription')
+Our spirits are created through experimentation, creativity and adventure. We broaden our palate and craft by developing a wide variety of spirits.
+@endsection
 @section('content')
 <section class="jumbotron p-mastehead about-banner px-0">
 </section>

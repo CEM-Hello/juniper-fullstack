@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+The Farmhouse @ {{$settings["general"]->site_title}}
+@endsection
 @section('content')
 <section class="jumbotron p-mastehead restaurant-banner px-0">
 </section>
@@ -30,46 +33,16 @@
 <section class="menu-categories">
   <div class="container">
     <div class="row justify-content-center text-center">
+      @foreach ($categories as $category)
       <div class="col-12 col-md-6 col-lg-2">
         <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/starters.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Starters</h3>
+          <a href="/food-menu/{{$category->title}}">
+            <img src="{{$category->image_url}}" alt="" class="img-fluid food-cat-img">
+            <h3>{{$category->title}}</h3>
           </a>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-2">
-        <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/pub-food.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Pub Food</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-2">
-        <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/entrees.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Entrees</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-2">
-        <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/dessert.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Deserts</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-2">
-        <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/brunch.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Brunch</h3>
-          </a>
-        </div>
-      </div>
+      @endforeach
     </div>
   </div>
 </section>

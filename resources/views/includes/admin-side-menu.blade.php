@@ -19,6 +19,7 @@
                       </ul>
                   </div>
               </li>
+              @if (Auth::user()->isAdmin())
               <li class="nav-item">
                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                     data-target="#submenu-2" aria-controls="submenu-2"><i
@@ -60,6 +61,8 @@
                     </ul>
                 </div>
             </li>
+            @endif
+            @if (Auth::user()->isAdmin())
             <li class="nav-item">
               <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                   data-target="#submenu-3" aria-controls="submenu-3"><i
@@ -101,6 +104,7 @@
                 </ul>
               </div>
           </li>
+          @endif
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
               data-target="#submenu-4" aria-controls="submenu-4"><i
@@ -127,6 +131,7 @@
               </ul>
             </div>
         </li>
+          @if (Auth::user()->isAdmin())
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
               data-target="#submenu-6" aria-controls="submenu-6"><i
@@ -144,6 +149,8 @@
               </ul>
             </div>
           </li>
+          @endif
+         @if (Auth::user()->isAdmin())
         <li class="nav-item">
           <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
               data-target="#submenu-7" aria-controls="submenu-7"><i
@@ -151,20 +158,21 @@
           <div id="submenu-7" class="collapse submenu" style="">
             <ul class="nav flex-column">
               <li class="nav-item">
-                  <a class="nav-link" href="#">General Settings <span
+                  <a class="nav-link" href="/admin/settings/general">General Settings <span
                     class="badge badge-secondary">New</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">SEO Settings<span
+                <a class="nav-link" href="/admin/settings/seo">SEO Settings<span
                   class="badge badge-secondary">New</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Social Media <span
+                <a class="nav-link" href="/admin/settings/social">Social Media <span
                   class="badge badge-secondary">New</span></a>
               </li>
             </ul>
           </div>
         </li>
+        @endif
       </ul>
     </div>
   </nav>

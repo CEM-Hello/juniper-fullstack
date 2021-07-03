@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+Tasting Room - {{$settings["general"]->site_title}}
+@endsection
 @section('content')
 <section class="jumbotron p-mastehead tasting-banner px-0">
 </section>
@@ -31,38 +34,16 @@
 <section class="menu-categories">
   <div class="container">
     <div class="row justify-content-center text-center">
+       @foreach ($categories as $category)
       <div class="col-12 col-md-6 col-lg-2">
         <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/gin.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Gin</h3>
+          <a href="/cocktail-menu/{{$category->title}}">
+            <img src="{{$category->image_url}}" alt="" class="img-fluid food-cat-img">
+            <h3>{{$category->title}}</h3>
           </a>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-2">
-        <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/tequila.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Tequila</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-2">
-        <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/vodka.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Vodka</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-2">
-        <div class="food-cat-item">
-          <a href="#">
-            <img src="/img/whiskey.jpg" alt="" class="img-fluid food-cat-img">
-            <h3>Whiskey</h3>
-          </a>
-        </div>
-      </div>
+      @endforeach
     </div>
   </div>
 </section>

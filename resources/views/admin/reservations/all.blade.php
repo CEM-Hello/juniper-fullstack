@@ -45,8 +45,33 @@
                                   </tr>
                               </thead>
                               <tbody>
+                                @foreach ($reservations as $reservation)
+                                <tr>
+                                    <th scope="row">{{$reservation->id}}</th>
+                                    <td>{{$reservation->fname}} {{$reservation->lname}}</td>
+                                    <td>{{$reservation->email}}</td>
+                                    <td>{{$reservation->phone_number}}</td>
+                                    <td>{{date('m/d/Y', strtotime($reservation->date))}}</td>
+                                    <td>{{$reservation->time}}</td>
+                                    <td>{{$reservation->guests_total}}</td>
+                                    <td>{{$reservation->seating}}</td>
+                                    <td>
+                                        
+                                        <a href="#" onclick="event.preventDefault();
+                document.getElementById('delete-reservation-{{$reservation->id}}').submit();">
+                    <i class="far fa-trash-alt"></i>
+                </a>
+                <form id="delete-reservation-{{$reservation->id}}" action="/admin/reservations/{{$reservation->id}}/delete" method="POST" style="display: none;">
+                                @method('DELETE')
+                                @csrf
+                            </form>
+
+                                    </td>
+                                </tr>    
+                            @endforeach
                               </tbody>
                           </table>
+                          {{ $reservations->links() }}
                       </div>
                   </div>
               </div>

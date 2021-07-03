@@ -1,4 +1,7 @@
 @extends('layouts.main')
+@section('title')
+Barrel Club - {{$settings["general"]->site_title}}
+@endsection
 @section('content')
 <section class="jumbotron p-mastehead club-banner px-0">
 </section>
@@ -20,25 +23,50 @@
   <div class="container">
     <div class="row justify-content-between align-items-center">
       <div class="col-lg-6 form-block">
-        <form>
+        <form method="POST" action="/barrel-club">
+          @csrf
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="fname">First Name</label>
-              <input type="text" class="form-control input-field" placeholder="First name">
+              <label for="inputfname">First Name</label>
+              <input id="inputfname" type="text" class="form-control input-field @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus placeholder="John">
+
+              @error('fname')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+              @enderror
             </div>
             <div class="form-group col-md-6">
-              <label for="lname">Last Name</label>
-              <input type="text" class="form-control input-field" placeholder="Last name">
+              <label for="inputlname">Last Name</label>
+              <input id="inputlname" type="text" class="form-control input-field @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus placeholder="Doe">
+
+              @error('lname')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+              @enderror
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="email">Email</label>
-              <input type="email" class="form-control input-field" placeholder="you@email.com">
+              <label for="inputemail">Email address</label>
+              <input id="inputemail" type="email" class="form-control input-field @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="you@youremail.com">
+
+              @error('email')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+              @enderror
             </div>
             <div class="form-group col-md-6">
-              <label for="phone">Phone Number</label>
-              <input type="tel" class="form-control input-field" placeholder="206-555-5555">
+              <label for="inputphone">Phone #</label>
+              <input id="inputphone" type="tel" class="form-control input-field @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus placeholder="2345678990">
+
+              @error('phone_number')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+              @enderror
             </div>
           </div>
           <button type="submit" class="btn btn-send">Sign Me Up!</button>
