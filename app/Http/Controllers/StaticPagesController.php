@@ -82,9 +82,13 @@ public function saveReservation(){
   $reservation->guests_total = request('guests_total');
   $reservation->seating = request('seating');
   $reservation->save();
-
+  return redirect('/reservations-thank-you');
  
-  return redirect('/');
+  
+}
+
+public function resThankyou() {
+  return view('pages.reservations-thank-you');
 }
 
 public function events() {
@@ -110,7 +114,11 @@ public function registerMember(){
   $member->save();
 
  
-  return redirect('/barrel-club');
+  return redirect('/barrel-club-welcome');
+}
+
+public function barrelThankYou() {
+  return view('pages.barrel-club-welcome');
 }
 
 public function barrelNews() {
@@ -120,4 +128,6 @@ public function barrelNews() {
 public function contact() {
     return view('pages.contact');
 }
+
+
 }

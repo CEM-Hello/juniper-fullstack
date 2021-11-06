@@ -1,49 +1,49 @@
 .form-block {
 
 
-  label {
-    font-size: 20px;
-    font-weight: 700;
-    color: $DkBlue;
+    label {
+        font-size: 20px;
+        font-weight: 700;
+        color: $DkBlue;
 
-    @include media-breakpoint-down(sm) {
-      font-size: 14px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
     }
-  }
 
-  .input-field {
-    border-radius: 0;
-    position: relative;
-    width: 100%;
-    height: 44px;
-    line-height: 42px;
-    font-size: 18px;
-    color: $LtBlue;
-    border: 1px solid $LtBlue;
-    padding: 0 20px;
+    .input-field {
+        border-radius: 0;
+        position: relative;
+        width: 100%;
+        height: 44px;
+        line-height: 42px;
+        font-size: 18px;
+        color: $LtBlue;
+        border: 1px solid $LtBlue;
+        padding: 0 20px;
 
-    @include media-breakpoint-down(sm) {
-      font-size: 14px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
     }
-  }
 
-  .message-field {
-    height: 150px;
-  }
-
-  .btn-send {
-    width: 100%;
-    background-color: $DkBlue;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: white;
-    font-size: 26px;
-    letter-spacing: 2px;
-    padding: 10px 0 5px 0;
-    transition: background-color .3s ease-in-out;
-
-    &:hover {
-      background-color: $Orange;
+    .message-field {
+        height: 150px;
     }
-  }
+
+    .btn-send {
+        width: 100%;
+        background-color: $DkBlue;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: white;
+        font-size: 26px;
+        letter-spacing: 2px;
+        padding: 10px 0 5px 0;
+        transition: background-color .3s ease-in-out;
+
+        &:hover {
+            background-color: $Orange;
+        }
+    }
 }

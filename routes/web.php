@@ -36,10 +36,11 @@ Route::get('/restaurant', [StaticPagesController::class, 'restaurant']);
 Route::get('/food-menu/{slug}', [StaticPagesController::class, 'foodMenu']);
 Route::get('/reservations', [StaticPagesController::class, 'reservations']);
 Route::post('/reservations', [StaticPagesController::class, 'saveReservation']);
+Route::get('/reservations-thank-you', [StaticPagesController::class, 'resThankyou']);
 Route::get('/events', [StaticPagesController::class, 'events']);
 Route::get('/barrel-club', [StaticPagesController::class, 'barrelClub']);
 Route::post('/barrel-club', [StaticPagesController::class, 'registerMember']);
-Route::get('/barrel-club/thank-you', [StaticPagesController::class, 'barrelThankYou']);
+Route::get('/barrel-club-welcome', [StaticPagesController::class, 'barrelThankYou']);
 Route::get('/barrel-news', [StaticPagesController::class, 'barrelNews']);
 Route::get('/contact', [StaticPagesController::class, 'contact']);
 
@@ -107,7 +108,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/dashboard', [AdminController::class, 'dashboard']);
 Route::get('/admin/estimated-revenue-daily', [AdminController::class, 'dailyRevenueLast30']);
 
-View::composer(['home', 'cocktail-menu/index', 'cocktail-menu/cocktail-menu', 'food-menu/index', 'food-menu/food-menu', 'pages/our-products', 'pages/barrel-club', 'pages/reservations', 'pages/events', 'pages/contact', 'pages/products', 'pages/about', 'pages/barrel-news', 'barrel-club/thank-you', 'reservations/thank-you', 'events/thank-you'], function ($view) {
+View::composer(['home', 'cocktail-menu/index', 'cocktail-menu/cocktail-menu', 'food-menu/index', 'food-menu/food-menu', 'pages/our-products', 'pages/barrel-club', 'pages/reservations', 'pages/events', 'pages/contact', 'pages/products', 'pages/about', 'pages/barrel-news', 'pages/barrel-club-welcome', 'pages/reservations-thank-you', 'events/thank-you'], function ($view) {
   $generalSettings = GeneralSetting::find(1);
   $socialSettings = SocialSetting::find(1);
   $seoSettings = SeoSetting::find(1);

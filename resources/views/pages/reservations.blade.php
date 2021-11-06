@@ -131,7 +131,7 @@ Farmhouse Reservations - {{$settings["general"]->site_title}}
           special requests, and any questions about our menu and hours of operation. Plus we always prefer to connect
           with guests personally. After all, that’s why we’re here. We look forward to hearing from you.
         </div>
-        <a href="#" class="h-top-btn">Questions</a>
+        <a href="/contact" class="h-top-btn">Questions</a>
       </div>
     </div>
   </div>

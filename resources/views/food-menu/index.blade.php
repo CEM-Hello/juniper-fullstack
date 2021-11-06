@@ -180,7 +180,7 @@ The Farmhouse @ {{$settings["general"]->site_title}}
             TO-GO 11-9</h3>
           <p>We welcome you to walk in Mon-Sun starting at 11:00am to enjoy favorites like our grilled cheese, the
             classic
-            Kale & Eggs or a hearty burger. Check out our Pub Food and To-Go <a href="#"
+            Kale & Eggs or a hearty burger. Check out our Pub Food and To-Go <a href="/food-menu/pub%20food"
               class="hours-block-btn">menu</a> for all your options.</p>
         </div>
         <div class="col-sm-12 col-lg-8">
@@ -198,7 +198,7 @@ The Farmhouse @ {{$settings["general"]->site_title}}
             4:30-10:00</h3>
           <p>We've designed our new menu to highlight and support local farms, winemakers & purveyors . Nothing is more
             important to us than this community and we will continue to do everything we can to see that it thrives.
-            Check out our dinner <a href="#" class="hours-block-btn">menu</a> or make a <a href="#"
+            Check out our dinner <a href="/food-menu/entrees" class="hours-block-btn">menu</a> or make a <a href="/reservations"
               class="hours-block-btn">reservation</a>. Patio seating first come, first serve.</p>
         </div>
       </div>
@@ -211,7 +211,7 @@ The Farmhouse @ {{$settings["general"]->site_title}}
           <p>Come enjoy our new small plates served daily at our bar and patio. The perfect snack for people watching
             under our umbrellas or getting cozy at the bar, these small bites are made with local ingredients and are a
             perfect pairing for a summer cocktail or glass of wine.<br>
-            <a href="#" class="hours-block-btn">See Menu</a></p>
+            <a href="/food-menu/starters" class="hours-block-btn">See Menu</a></p>
         </div>
         <div class="col-sm-12 col-lg-8">
           <img src="/img/patio-hours.jpg" alt="" class="img-fluid">

@@ -1,5 +1,5 @@
 <div class="mobile-header"></div>
-<a href="#">
+<a href="/">
   <div class="mobile-logo"></div>
 </a>
 <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
@@ -23,7 +23,7 @@
 
 <header>
   <div class="header-position">
-    <a href="#">
+    <a href="/">
       <div class="logo"></div>
     </a>
     <nav class="site-nav">

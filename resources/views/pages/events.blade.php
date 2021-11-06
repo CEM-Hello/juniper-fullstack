@@ -33,13 +33,13 @@ Events - {{$settings["general"]->site_title}}
           Friday at 5pm and Saturday at 5pm & 6pm, and include a 45-minute educational experience and guided tasting of
           our current offerings.
         </div>
-        <a href="#" class="h-top-btn">Book a Tour</a>
+        <a href="https://www.eventbrite.com/" target="_blank" class="h-top-btn">Book a Tour</a>
         <div class="top-p pt-5">
           <b>Cocktail Classes</b> can be booked for private groups of 10 guests and are held in our Tasting Room.
           Virtual classes are also available - reach out to us at <a href="#">cheers@juniperdistillingco.com</a> for
           more details!
         </div>
-        <a href="#" class="h-top-btn"><u>Cocktail Class Tickets</u></a>
+        <a href="https://www.eventbrite.com/" target="_blank" class="h-top-btn"><u>Cocktail Class Tickets</u></a>
       </div>
       <div class="col-lg-6">
         <span class="event-gallery-wrap">
@@ -65,12 +65,12 @@ Events - {{$settings["general"]->site_title}}
           <b>Private Tour & Tasting.</b> Looking for a personal tour & tasting? Book a private 45 minute educational
           experience, finished with a tasting of our current spirit offerings.
         </div>
-        <a href="#" class="h-top-btn">Inquire Here</a>
+        <a href="#inquire" class="h-top-btn">Inquire Here</a>
         <div class="top-p pt-5">
           <b>Private Cocktail Class.</b> Our private classes are available for groups ranging from 6-40 guests. These
           hour-long experiences are ideal for birthdays, bachelorette parties, or even a fun night out with friends!
         </div>
-        <a href="#" class="h-top-btn"><u>Inquire Here</u></a>
+        <a href="#inquire" class="h-top-btn"><u>Inquire Here</u></a>
       </div>
     </div>
   </div>
@@ -88,7 +88,7 @@ Events - {{$settings["general"]->site_title}}
           even create custom experiences and drinks for your special event! Click below to inquire for package & pricing
           details.
         </div>
-        <a href="#" class="h-top-btn">Inquire Here</a>
+        <a href="#inquire" class="h-top-btn">Inquire Here</a>
       </div>
       <div class="col-lg-6">
         <span class="event-gallery-wrap">
@@ -102,36 +102,36 @@ Events - {{$settings["general"]->site_title}}
   <div class="container">
     <div class="row justify-content-between align-items-center">
       <div class="col-lg-6 form-block order-switch">
-        <form>
+        <form name="eventForm">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="fname">Name</label>
-              <input type="text" class="form-control input-field" placeholder="Full Name">
+              <input type="text" name="fullName" class="form-control input-field" placeholder="Full Name">
             </div>
             <div class="form-group col-md-6">
               <label for="email">Email</label>
-              <input type="email" class="form-control input-field" placeholder="you@email.com">
+              <input type="email" name="email" class="form-control input-field" placeholder="you@email.com">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="phone">Phone Number</label>
-              <input type="tel" class="form-control input-field" placeholder="206-555-5555">
+              <input type="tel" name="phone" class="form-control input-field" placeholder="206-555-5555">
             </div>
             <div class="form-group col-md-6">
               <label for="guest count">Number of Guests</label>
-              <input type="text" class="form-control input-field" placeholder="Guest Count">
+              <input type="text" name="count" class="form-control input-field" placeholder="Guest Count">
             </div>
           </div>
           <label for="message">Message or Questions</label>
-          <textarea class="form-control form-control-lg input-field message-field" rows="10"
-            placeholder="Dear Juniper..."></textarea>
+          <textarea class="form-control form-control-lg input-field message-field" name="message" rows="10"
+            placeholder="I want to have my next event at Juniper!"></textarea>
           <button type="submit" class="btn btn-send mt-4">Send</button>
         </form>
       </div>
       <div class="col-lg-6 tours-text">
         <h2 class="top-h1-2">
-          <span>Book Your Next Event With Juniper</span>
+          <span id="inquire">Book Your Next Event With Juniper</span>
         </h2>
         <div class="top-p">
           Drop us a note and let’s work together to make your perfect event happen. We can tailor every event to your

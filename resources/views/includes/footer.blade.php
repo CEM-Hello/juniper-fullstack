@@ -24,7 +24,7 @@
               <div class="footer-hours"><span>Saturday</span><i></i><b>10:00a - 01:00a</b></div>
             </li>
             <li>
-              <div class="footer-hours"><span>Sunday</span><i></i><b>8:00a - 11:00a</b></div>
+              <div class="footer-hours"><span>Sunday</span><i></i><b>8:00a - 11:00p</b></div>
             </li>
           </ul>
         </div>
@@ -61,9 +61,9 @@
       </div>
     </div>
   </div>
-  <div class="copyright text-center">
+  <div class="copyright text-center p-2">
     <div class="container">
-      <span>© 2019 All Rights Reserved.</span>
+      <span>© 2020 All Rights Reserved.</span>
     </div>
   </div>
 </footer>

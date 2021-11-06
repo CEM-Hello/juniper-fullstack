@@ -16,7 +16,7 @@
       <div class="page-box__body">
         <p>The opportunity to meet and serve you is one we don’t take lightly. Not for the past six years at least. Come
           spend an evening. Our favorite thing in the world is taking care of others, and few places can do it quite
-          like we can.</p>
+          like we can. Looking for something special just ask one of our mixologists to make it for you.</p>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@
     <div class="row">
       <div class="col-12">
         <div class="text-center">
-          <h3>{{$cocktailItem}}</h3>
+          <h3>{{$cocktailItem}} Cocktails</h3>
         </div>
         <div class="row">
           @foreach ($cocktailItems as $item)

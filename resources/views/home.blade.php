@@ -8,7 +8,7 @@
   <h1>Welcome to Seattle's First Destination Distillery</h1>
   <p>Located in the heart of Queen Anne, Juniper Distilling Co. is a 7,300 sq foot, full production distillery,
     tasting room, restaurant and event space</p>
-  <a href="#" class="h-top-btn">Read More</a>
+  <a href="/about" class="h-top-btn">Read More</a>
 </div>
 <div class="scroll">
   <div class="scroll-line"></div>
@@ -27,7 +27,7 @@
       have combined the best ingredients, both edible and drinkable, to create a menu and cocktail list that will
       satisfy all Seattle locals, our neighbors, and guests.
     </div>
-    <a href="#" class="h-top-btn"><u>Learn More</u></a>
+    <a href="/about" class="h-top-btn"><u>Learn More</u></a>
   </div>
 </div>
 </section>
@@ -45,7 +45,7 @@
           while also paying homage to some timeless classics and always highlighting the spirits that we produce in
           house.
         </div>
-        <a href="#" class="h-top-btn">Learn More</a>
+        <a href="/tasting-room" class="h-top-btn">Learn More</a>
       </div>
     </div>
     <div class="col-lg-6">
@@ -82,10 +82,10 @@
       Distilling high quality craft spirits is our passion, and we believe you can see this in every product we
       release. Learn about our spirits below.
     </div>
-    <a href="#" class="h-top-btn"><u>Learn More</u></a>
+    <a href="/products" class="h-top-btn"><u>Learn More</u></a>
   </div>
 </div>
-<a href="#">
+<a href="/products">
   <img src="/img/h-products.jpg" alt="" class="h-products-bottles">
 </a>
 </section>
@@ -107,7 +107,7 @@
         experience. Stop by for a cocktail, enjoy a tasting filght or book an event with us. We can accommodate groups
         of up to 85 guests.
       </div>
-      <a href="#" class="h-top-btn"><u>Learn More</u></a>
+      <a href="/events" class="h-top-btn"><u>Learn More</u></a>
       <div class="tony-text">
         <p>“I had an amazing time at Juniper. The staff were amazing, and they catered to our group with grace, style,
           and
@@ -136,7 +136,7 @@
         may not find anywhere else. The result is Washington food and drink that is honest, straightforward, and pays
         homage to the region we are so lucky to call home.
       </div>
-      <a href="#" class="h-top-btn"><u>Learn More</u></a>
+      <a href="/restaurant" class="h-top-btn"><u>Learn More</u></a>
     </div>
     <div class="col-lg-5">
       <span class="restaurant-gallery-wrap">
@@ -169,7 +169,7 @@
         Salvaged wood, whitewashed brick, exposed concrete, push velvet, denim linen, copper and marble accents come
         together to create a fresh, unique and insta-worthy atmosphere.
       </div>
-      <a href="#" class="h-top-btn"><u>Learn More</u></a>
+      <a href="/events" class="h-top-btn"><u>Learn More</u></a>
     </div>
   </div>
 </div>

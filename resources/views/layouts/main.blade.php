@@ -9,5 +9,7 @@
     <div class="page-sections">
   @yield('content')
   @include('includes.footer')
+
+ 
 </body>
 </html>

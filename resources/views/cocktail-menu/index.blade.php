@@ -14,7 +14,7 @@ Tasting Room - {{$settings["general"]->site_title}}
         </h1>
       </div>
       <div class="page-box__body">
-        <p>Juniper Distillery produces small, hand-crafted batches of Gins, Vodkas, Whiskeys. This is the real
+        <p>Juniper Distillery produces small, hand-crafted batches of Gins, Vodkas, Tequilas and Whiskeys. This is the real
           deal—spirits made with a sense of place and a connection to the people who grew the raw ingredients and the
           man who coaxed them into their more spirited forms—gins in which you can taste the botanicals, distinctive
           vodkas, and whiskeys that are flavorful and smooth.</p>
